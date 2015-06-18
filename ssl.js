@@ -196,6 +196,7 @@ $(function () {
       },
       categories: ['launch', 'bug'],
       gridLineWidth: 0,
+      min: 0
     },
     {
       title: {
