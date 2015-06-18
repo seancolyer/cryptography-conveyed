@@ -163,7 +163,7 @@ $(function () {
         [1404313200, 5200000000],
         [1435870800, 8100000000]*/
     ];
-    $('#container').highcharts({
+    $('#cpu-container').highcharts({
         credits: {
             enabled: false
         },
