@@ -129,53 +129,23 @@ $(function () {
         [Date.UTC(2013, 06, 01), 6300000000],
         [Date.UTC(2014, 06, 01), 5200000000],
         [Date.UTC(2015, 06, 01), 8100000000]
-        /*[867834000, 3500000],
-        [930949200, 8000000],
-        [930949200, 15000000],
-        [930949200, 23000000],
-        [962506800, 20000000],
-        [962506800, 25000000],
-        [962506800, 30000000],
-        [994064400, 57000000],
-        [994064400, 60000000],
-        [1025622000, 63000000],
-        [1025622000, 107000000],
-        [1057179600, 117000000],
-        [1057179600, 135000000],
-        [1088737200, 160000000],
-        [1088737200, 222000000],
-        [1120294800, 303000000],
-        [1120294800, 321000000],
-        [1151852400, 384000000],
-        [1151852400, 681000000],
-        [1183410000, 700000000],
-        [1183410000, 754000000],
-        [1214967600, 959000000],
-        [1214967600, 1400000000],
-        [1246525200, 2154000000],
-        [1278082800, 2640000000],
-        [1278082800, 3200000000],
-        [1278082800, 3000000000],
-        [1341198000, 3540000000],
-        [1309640400, 4312711873],
-        [1341198000, 7080000000],
-        [1372755600, 6300000000],
-        [1404313200, 5200000000],
-        [1435870800, 8100000000]*/
     ];
     $('#cpu-container').highcharts({
         credits: {
             enabled: false
         },
         chart: {
-            type: 'scatter',
-            zoomType: 'x'
+          type: 'scatter',
+          zoomType: 'x',
+          style: {
+            fontFamily: 'Montserrat'
+          },
         },
         title: {
-            text: 'Transistors over Time'
+          text: 'Transistors over Time'
         },
         subtitle: {
-            text: 'Source: wikipedia.org'
+            //text: 'Source: wikipedia.org'
         },
         xAxis: {
             type: 'datetime',
@@ -187,35 +157,56 @@ $(function () {
                 text: 'Date'
             },
             plotLines: [{
-                color: 'red', // Color value
-                value: Date.UTC(1979, 06, 01), // Value of where the line will appear
+                color: 'red',
+                value: Date.UTC(1979, 06, 01),
                 width: 2,
                 label: {
-                    text: 'RSA'
+                    text: 'RSA Released'
                 }
             },
             {
-                color: 'blue', // Color value
-                value: Date.UTC(1989, 06, 01), // Value of where the line will appear
+                color: 'red',
+                value: Date.UTC(1999, 08, 22),
                 width: 2,
                 label: {
-                    text: 'PC'
+                    text: 'RSA 512 Factored'
                 }
             },
             {
-                color: 'blue', // Color value
-                value: Date.UTC(2007, 06, 01), // Value of where the line will appear
+                color: 'red',
+                value: Date.UTC(2009, 12, 12),
                 width: 2,
                 label: {
-                    text: 'iPhone'
+                    text: 'RSA 768 Factored'
+                }
+            },
+            {
+                color: 'blue',
+                value: Date.UTC(1981, 08, 01),
+                width: 2,
+                label: {
+                    text: 'IBM PC Launch'
+                }
+            },
+            {
+                color: 'blue',
+                value: Date.UTC(2007, 06, 01),
+                width: 2,
+                label: {
+                    text: 'iPhone Launch'
                 }
             }]
         },
         yAxis: {
-            title: {
-                text: 'Transistors'
-            },
-            min: 0
+          title: {
+            text: 'Transistors'
+          },
+          min: 0,
+          labels: {
+            formatter: function() {
+              return this.value / 1000000000 + ' Billion';
+            }
+          }
         },
         tooltip: {
             headerFormat: '<b>{series.name}</b><br>',
