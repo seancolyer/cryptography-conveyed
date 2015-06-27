@@ -7,6 +7,9 @@ $(function () {
         fontFamily: 'Montserrat'
       },
     },
+    credits: {
+      enabled: false
+    },
     title: {
       text: 'Incremental iPhone Decryption Cost'
     },
