@@ -209,7 +209,7 @@ $(function () {
         },
         tooltip: {
             headerFormat: '<b>{series.name}</b><br>',
-            pointFormat: '{point.x:%Y}: {point.y:.2f} m'
+            pointFormat: '{point.x:%Y}: {point.y} transistors'
         },
 
         plotOptions: {
