@@ -1,4 +1,3 @@
-
 $(function () {
     var cpuData = [
         [Date.UTC(1971, 06, 01), 2300],
@@ -142,7 +141,7 @@ $(function () {
           },
         },
         title: {
-          text: 'Transistors over Time'
+          text: 'Cryptography over Time'
         },
         subtitle: {
             //text: 'Source: wikipedia.org'

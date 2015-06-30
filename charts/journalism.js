@@ -11,7 +11,7 @@ $(function() {
         colors: ['rgba(255,20,20,0.1)', 'rgba(255,20,20,0.3)', 'rgba(255,20,20,0.6)', 'rgba(255,20,20,0.9)'],
 
         title : {
-            text : 'Reports Without Borders Rating'
+            text : 'Reporters Without Borders Rating'
         },
 
         mapNavigation: {
